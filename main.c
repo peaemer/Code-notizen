@@ -180,10 +180,6 @@ int main(){
     SeiteC1 = sqrt(SeiteA1*SeiteA1 + SeiteB1*SeiteB1);
     printf("\nDie Seite C ist: %lf\n",SeiteC1);
 
-    fflush(stdin);
-
-
-
 
     //USER INPUT ENDE
 
