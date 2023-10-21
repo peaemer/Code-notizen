@@ -39,6 +39,7 @@ int main(){
     double SeiteA1;
     double SeiteB1;
     double SeiteC1;
+    bool Sonne = true;
 
     printf("Cora, ich bin %d Jahre alt\n",age);
     printf("Meine name ist %s \n",name);
@@ -214,14 +215,21 @@ int main(){
 
     //USER INPUT ENDE
 
+    if(temp >= 0 && temp <=30 && Sonne == true){                                                                            // Logical operator && AND fügt neue Paremeter bei einer If abfrage hinzu in dem fall ein UND
+        printf("\nSchönes Wetter heute");
+    }
+    else{
+        printf("\nSchlechtes Wetter heute");
+    }
+
     double wurzel1 = sqrt(9);                                                                                           //wurzel ziehen
     double hoch = pow(10, 10);                                                                                       // 2 hoch 10 zb
     int runden = round(299.42);                                                                                            // Runden
     int hochrunden = ceil(2.12);                                                                                        // hochrunden
     int runterrunden = floor(2.99);                                                                                     // runter runden
     double Absolutezahl = fabs(-12);                                                                                    // die absolute zahl also der wert is 0
-    double logrythm = log(3);                                                                                           // logrythm
-    double sinus = sin(3);                                                                                              // Sinus wert
+    double logrythm = log(25);                                                                                           // logrythm
+    double sinus = sin(4);                                                                                              // Sinus wert
     double cosinus = cos(10);                                                                                           // Cosinus wert
     double tangens = tan(11);                                                                                           // Tangens wert
 
