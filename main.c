@@ -78,7 +78,7 @@ int main(){
     double num1;
     double num2;
     double summe2;
-
+                                                                                                                            //Taschenrechner überspringen :)
     printf("\nGib mir ein Operandie ( - + / *)");                                                                   // So programmiert man ein Taschenrechner :P
     scanf("%c", &operandie);
 
