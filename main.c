@@ -2,6 +2,7 @@
 #include <stdbool.h>                                                                                                        //Libary für Boolean Studio
 #include <string.h>                                                                                                         //Libary für string comannds
 #include <math.h>                                                                                                           //Libary für Mathe Funktionen
+#include <ctype.h>                                                                                                          //Libary für String types
 
 int main(){
 
@@ -78,14 +79,40 @@ int main(){
     double num1;
     double num2;
     double summe2;
-                                                                                                                            //Taschenrechner überspringen :)
+    char einheit;
+    float temp;
+
+    printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                            // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
+    scanf("%c", &einheit);
+
+    einheit = toupper(einheit);
+
+    if(einheit == 'C'){
+        printf("\nWie viel grad Celsius?");
+        scanf("%f", &temp);
+        temp = (temp * 9 / 5) + 32;
+        printf("\nDas wäre dann %.1f Fahrenheit!", temp);
+    }
+    else if(einheit == 'F'){
+        printf("\nWie viel Grad Fahrenheit?");
+        scanf("%f", &temp);
+        temp = ((temp - 32) *5) / 9;
+        printf("\nDas wäre dann %.1f Celsius!", temp);
+    }
+    else{
+        printf("Keine Einheit gefunden.");
+    }
+
+    fflush(stdin);
+
+                                                            //Taschenrechner überspringen :)
     printf("\nGib mir ein Operandie ( - + / *)");                                                                   // So programmiert man ein Taschenrechner :P
     scanf("%c", &operandie);
 
     printf("\nGib mir die Erste Zahl");
     scanf("%lf", &num1);
 
-    printf("\nGib mir die die zweite Zahl");
+    printf("\nGib mir die zweite Zahl");
     scanf("%lf", &num2);
 
     switch (operandie){
@@ -109,7 +136,9 @@ int main(){
             printf("%c is not valid", operandie);
     }
 
+
     fflush(stdin);
+
     printf("\nWie ist dein name?:");
     fgets(name_input, 25, stdin);                                                                       //fgets berücksichtig auch leerzeichen sscanf auch
 
@@ -131,6 +160,8 @@ int main(){
     fflush(stdin);                                                                                                    // Bei buffer overflow
     printf("\nWelche Brust groesse hast du?");
     scanf("%c", &boobies);
+
+    boobies = toupper(boobies);                                                                                        // Der Input wird automatisch zum Großbuchstaben
 
     switch (boobies) {                                                                                                    // Switch wird verwendet anstatt else if wenn mehr als nur einmal ein if zustande kommt
         case 'A':
@@ -158,7 +189,7 @@ int main(){
             printf("HEEEEEEEELLLLLLL NOOOOOOO");
             break;
         default:
-            printf("Bitte nur A-H und Grossebuchstaben");
+            printf("Bitte nur A-H ");
     }
 
     printf("\nGib mir ein Radius eines kreises");
