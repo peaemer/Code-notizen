@@ -61,15 +61,15 @@ int main(){
     float item1 = 10.70;
     float item2 = 20.15;
     float item3 = 299.99;
-    float summe = y % x;                                                                                                   // +/- (* /) Mathe operationen (%) modulus gibt dir den wert der übrig ist (++ increments -- decrements)
+    float summe = y % x;                                                                                                    // +/- (* /) Mathe operationen (%) modulus gibt dir den wert der übrig ist (++ increments -- decrements)
 
-    printf("Item 1: $%.2f\n", item1);                                                                               // %.2 um die nach kommastellen festzulegen
-    printf("Item 2: $%-8f\n", item2);                                                                               // %- Nach links alignen (wenn die Zahl zu lange ist)
-    printf("Item 3: $%1f\n", item3);                                                                                // %1 Die width nach vorne
+    printf("Item 1: $%.2f\n", item1);                                                                                // %.2 um die nach kommastellen festzulegen
+    printf("Item 2: $%-8f\n", item2);                                                                                // %- Nach links alignen (wenn die Zahl zu lange ist)
+    printf("Item 3: $%1f\n", item3);                                                                                 // %1 Die width nach vorne
     printf("%.1f\n", summe);
 
-    int x1 = 5;                                                                                                            // Variablen rechnung kann gekürzt werden mit x+= 5                      //x1 = x1 *2;
-    x1*=5;                                                                                                                 // beispiel für ungekürzte variable x1 = x1 *2;
+    int x1 = 5;                                                                                                             // Variablen rechnung kann gekürzt werden mit x+= 5                      //x1 = x1 *2;
+    x1*=5;                                                                                                                  // beispiel für ungekürzte variable x1 = x1 *2;
 
     printf("%d\n", x1);
 
@@ -84,7 +84,7 @@ int main(){
     char einheit;
     float temp;
 
-    printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                            // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
+    printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
     scanf("%c", &einheit);
 
     einheit = toupper(einheit);
@@ -107,8 +107,8 @@ int main(){
 
     fflush(stdin);
 
-                                                            //Taschenrechner überspringen :)
-    printf("\nGib mir ein Operandie ( - + / *)");                                                                   // So programmiert man ein Taschenrechner :P
+                                                                                                                            //Taschenrechner überspringen :)
+    printf("\nGib mir ein Operandie ( - + / *)");                                                                    // So programmiert man ein Taschenrechner :P
     scanf("%c", &operandie);
 
     printf("\nGib mir die Erste Zahl");
@@ -142,30 +142,30 @@ int main(){
     fflush(stdin);
 
     printf("\nWie ist dein name?:");
-    fgets(name_input, 25, stdin);                                                                       //fgets berücksichtig auch leerzeichen sscanf auch
+    fgets(name_input, 25, stdin);                                                                        //fgets berücksichtig auch leerzeichen sscanf auch
 
     printf("Hallo User, wie alt bist?:");
-    scanf("%d", &age_input);                                                                                        //scanf für user input &=speichermedium für ausgabe oder weiterverarbeitung
+    scanf("%d", &age_input);                                                                                         //scanf für user input &=speichermedium für ausgabe oder weiterverarbeitung
     if(age_input >= 18){
-        printf("https://www.amazon.de/Heiliges-Heilwasser-Fluss-Jordan-Flasche/dp/B09D2ZP291/");                    //If statement, selbst erklärend :)
+        printf("https://www.amazon.de/Heiliges-Heilwasser-Fluss-Jordan-Flasche/dp/B09D2ZP291/");                     //If statement, selbst erklärend :)
     }
-    else if(age_input < 0){                                                                                                // else if wird verwendet um neue Parameter einzugeben inerhalb eines If statements
+    else if(age_input < 0){                                                                                                 // else if wird verwendet um neue Parameter einzugeben inerhalb eines If statements
         printf("Verarsch mich nicht Brudi!");
     }
     else{
-        printf("du bist zu jung fuer eine NSFW Nachicht :)");                                                       //else was passieren soll wenn die vorraussetzungen für "if" nicht erfüllt sind
+        printf("du bist zu jung fuer eine NSFW Nachicht :)");                                                        //else was passieren soll wenn die vorraussetzungen für "if" nicht erfüllt sind
     }
 
     printf("\nDu bist %d jahre alt!\n", age_input);
     printf("Dein name ist %s\n", name_input);
 
-    fflush(stdin);                                                                                                    // Bei buffer overflow
+    fflush(stdin);                                                                                                     // Bei buffer overflow
     printf("\nWelche Brust groesse hast du?");
     scanf("%c", &boobies);
 
-    boobies = toupper(boobies);                                                                                        // Der Input wird automatisch zum Großbuchstaben
+    boobies = toupper(boobies);                                                                                          // Der Input wird automatisch zum Großbuchstaben
 
-    switch (boobies) {                                                                                                    // Switch wird verwendet anstatt else if wenn mehr als nur einmal ein if zustande kommt
+    switch (boobies) {                                                                                                      // Switch wird verwendet anstatt else if wenn mehr als nur einmal ein if zustande kommt
         case 'A':
             printf("geht schon >.> probably good personality");
             break;
@@ -198,10 +198,10 @@ int main(){
     scanf("%lf", &radius1);
 
 
-    umfang1 = 2 * pi * radius1;                                                                                           //mit user input kann auch Mathe aufgaben gelöst werden
+    umfang1 = 2 * pi * radius1;                                                                                             //mit user input kann auch Mathe aufgaben gelöst werden
     Flaesche1 = pi * radius1 * radius1;
 
-    printf("\numfang: %.2lf",umfang1);                                                                             //hierzu brauch man die Formel und mann muss sachen bestimmen um Formeln zu lösen
+    printf("\numfang: %.2lf",umfang1);                                                                               //hierzu brauch man die Formel und mann muss sachen bestimmen um Formeln zu lösen
     printf("\nFlaeche: %.2lf", Flaesche1);
 
     printf("\n Was ist die Länge der seite A?");
@@ -223,18 +223,33 @@ int main(){
         printf("\nSchlechtes Wetter heute");
     }
 
-    double wurzel1 = sqrt(9);                                                                                           //wurzel ziehen
-    double hoch = pow(10, 10);                                                                                       // 2 hoch 10 zb
-    int runden = round(299.42);                                                                                            // Runden
-    int hochrunden = ceil(2.12);                                                                                        // hochrunden
-    int runterrunden = floor(2.99);                                                                                     // runter runden
-    double Absolutezahl = fabs(-12);                                                                                    // die absolute zahl also der wert is 0
-    double logrythm = log(25);                                                                                           // logrythm
-    double sinus = sin(4);                                                                                              // Sinus wert
-    double cosinus = cos(10);                                                                                           // Cosinus wert
-    double tangens = tan(11);                                                                                           // Tangens wert
+    if(age_input == 17 || age_input == 25){                                                                                 // Logical Operator || OR wird benutzt wenn einer der beiden Parameter erfüllt sein muss
+        printf("\nKann doch wieder nur Cora oder Jack Sein die mich benutzt haben !");
+    }
+    else{
+        printf("\nheute mal jemand neues der mich benutzt hat oder einfach faul gewesen !");
+    }
 
-    printf("\n%lf", sinus);
+    if(!Sonne){                                                                                                             // Logical Operator (!) NOT wird benutzt um ein Boolean wert zu reversen
+        printf("\nIst ziemlich bewölkt heute!");
+    }
+    else{
+        printf("\nUUUUH SONNE!");
+    }
 
-    return 0;                                                                                                             // Return 0 bei fehler return 1 weil nicht bis line gekommen
+
+    double wurzel1 = sqrt(9);                                                                                            //wurzel ziehen
+    double hoch = pow(10, 10);                                                                                        // 2 hoch 10 zb
+    int runden = round(299.42);                                                                                             // Runden
+    int hochrunden = ceil(2.12);                                                                                         // hochrunden
+    int runterrunden = floor(2.99);                                                                                      // runter runden
+    double Absolutezahl = fabs(-12);                                                                                     // die absolute zahl also der wert is 0
+    double logrythm = log(10000);                                                                                        // logrythm
+    double sinus = sin(4);                                                                                               // Sinus wert
+    double cosinus = cos(10);                                                                                            // Cosinus wert
+    double tangens = tan(11);                                                                                            // Tangens wert
+
+    printf("\n%lf", logrythm);
+
+    return 0;                                                                                                               // Return 0 bei fehler return 1 weil nicht bis line gekommen
 }
