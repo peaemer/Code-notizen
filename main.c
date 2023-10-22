@@ -17,6 +17,12 @@ void shakira_shakira(){                                                         
     printf("\nNo fightin'");
 }
 
+void geburtstag(char name_input[25], int age_input){                                                                        // Funktionen können gespeicherte werte verarbeiden welche aber in der Funktion und in der "call line" angegeben werden müssen
+    printf("\nAlles gute zum Gebutstag %s", name_input);
+    printf("\nDu bist jetzt %d Jahre alt!", age_input);
+
+}
+
 int main(){
 
     printf(" Hallo\t\'Alexis\' :) \n ");
@@ -172,7 +178,7 @@ int main(){
     printf("\nDu bist %d jahre alt!\n", age_input);
     printf("Dein name ist %s\n", name_input);
 
-    fflush(stdin);                                                                                                     // Bei buffer overflow
+    fflush(stdin);                                                                                                      // Bei buffer overflow
     printf("\nWelche Brust groesse hast du?");
     scanf("%c", &boobies);
 
@@ -217,10 +223,10 @@ int main(){
     printf("\numfang: %.2lf",umfang1);                                                                               //hierzu brauch man die Formel und mann muss sachen bestimmen um Formeln zu lösen
     printf("\nFlaeche: %.2lf", Flaesche1);
 
-    printf("\n Was ist die Länge der seite A?");
+    printf("\nWas ist die Laenge der seite A?(bei einem Dreieck)");
     scanf("%lf",&SeiteA1);
 
-    printf("\n Was ist die Länge der seite B?");
+    printf("\nWas ist die Laenge der seite B?(bei einem Dreieck)");
     scanf("%lf",&SeiteB1);
 
     SeiteC1 = sqrt(SeiteA1*SeiteA1 + SeiteB1*SeiteB1);
@@ -238,11 +244,14 @@ int main(){
             shakira_shakira();
             break;
         case 'N':
-            printf("Schade, vllt beim nächsten mal :c");
+            printf("Schade, vllt beim naechsten mal :c");
             break;
         default:
             printf("keine eingabe erkannt");
     }
+    fflush(stdin);
+
+
 
 
     //USER INPUT ENDE
@@ -271,7 +280,7 @@ int main(){
 
 
 
-    double wurzel1 = sqrt(9);                                                                                            //wurzel ziehen
+    double wurzel1 = sqrt(9);                                                                                            // wurzel ziehen
     double hoch = pow(10, 10);                                                                                        // 2 hoch 10 zb
     int runden = round(299.42);                                                                                             // Runden
     int hochrunden = ceil(2.12);                                                                                         // hochrunden
@@ -283,6 +292,8 @@ int main(){
     double tangens = tan(11);                                                                                            // Tangens wert
 
     printf("\n%lf", logrythm);
+
+    geburtstag(name_input, age_input);                                                                                      // Funktion mit "user input" wichtig user input muss immer vorher ermittelt worden sein!
 
     return 0;                                                                                                               // Return 0 bei fehler return 1 weil nicht bis line gekommen
 }
