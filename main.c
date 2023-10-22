@@ -5,6 +5,18 @@
 #include <ctype.h>                                                                                                          //Libary für String types
 // https://www.youtube.com/watch?v=87SH2Cn0s9A&t=1569s
 
+void shakira_shakira(){                                                                                                     // Funktion wird genutzt um codes nicht 100mal schreiben zu müssen mit "name"(); kann die funktion abgerufen werden
+    printf("\nI never really knew that she could dance like this (Hey)");
+    printf("\nShe make a man wanna speak Spanish");
+    printf("\n¿Cómo se llama? (¡Sí!), ¿bonita? (¡Sí!)");
+    printf("\nMi casa (Shakira, Shakira), su casa");
+    printf("\nOh, baby, when you talk like that (Huh-uh; yeah)");
+    printf("\nYou make a woman go mad (Oh)");
+    printf("\nSo be wise (¡Sí!), and keep on (¡Sí!)");
+    printf("\nReading the signs of my body (Uno, dos, tres, cuatro)");
+    printf("\nNo fightin'");
+}
+
 int main(){
 
     printf(" Hallo\t\'Alexis\' :) \n ");
@@ -17,7 +29,7 @@ int main(){
 
     int x;                                                                                                                  // declaration
     x = 123;                                                                                                                // initialization
-    int y = 231;                                                                                                            // initialization+initialization
+    int y = 231;                                                                                                            // declaration + initialization
                                                                                                                             // "const" um floats und int als nicht änderbar zu markieren (zb. const float pi = 3.14159265359;)
     int age = 25;                                                                                                           // integer                                              %d  (dezimal)
     float psize = 2.05;                                                                                                     // float                                                %f  (float)
@@ -83,6 +95,7 @@ int main(){
     double summe2;
     char einheit;
     float temp;
+    char shakira;
 
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
     scanf("%c", &einheit);
@@ -212,6 +225,24 @@ int main(){
 
     SeiteC1 = sqrt(SeiteA1*SeiteA1 + SeiteB1*SeiteB1);
     printf("\nDie Seite C ist: %lf\n",SeiteC1);
+    fflush(stdin);
+
+
+
+    printf("Willst du den refrain von Shakira? (Y/N)");                                                               // Beispiel für die verwendung von funktionen
+    scanf("%c", &shakira);
+
+    shakira = toupper(shakira);
+    switch (shakira) {
+        case 'Y':
+            shakira_shakira();
+            break;
+        case 'N':
+            printf("Schade, vllt beim nächsten mal :c");
+            break;
+        default:
+            printf("keine eingabe erkannt");
+    }
 
 
     //USER INPUT ENDE
@@ -236,6 +267,8 @@ int main(){
     else{
         printf("\nUUUUH SONNE!");
     }
+
+
 
 
     double wurzel1 = sqrt(9);                                                                                            //wurzel ziehen
