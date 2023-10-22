@@ -19,7 +19,12 @@ void shakira_shakira(){                                                         
 
 void geburtstag(char name_input[25], int age_input){                                                                        // Funktionen können gespeicherte werte verarbeiden welche aber in der Funktion und in der "call line" angegeben werden müssen
     printf("\nAlles gute zum Gebutstag %s", name_input);
-    printf("\nDu bist jetzt %d Jahre alt!", age_input);
+    printf("Du bist jetzt %d Jahre alt!", age_input);
+
+}
+
+double hoch_age(double age_input){
+    return age_input * age_input;                                                                                                         //return gibt auch sachen zurück die in ihren Funktionen enstanden sind
 
 }
 
@@ -292,6 +297,9 @@ int main(){
     double tangens = tan(11);                                                                                            // Tangens wert
 
     printf("\n%lf", logrythm);
+
+    double alter_hoch = hoch_age(age_input);
+    printf("%lf", hoch_age(age_input));
 
     geburtstag(name_input, age_input);                                                                                      // Funktion mit "user input" wichtig user input muss immer vorher ermittelt worden sein!
 
