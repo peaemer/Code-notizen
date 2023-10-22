@@ -23,12 +23,16 @@ void geburtstag(char name_input[25], int age_input){                            
 
 }
 
-double hoch_age(double xy){
+double hoch_age(double xy)
+{
 return xy * xy;
                                                                                                                             //zu finden in zeile 302
-                                                                                                                            //return gibt auch sachen zurück die in ihren Funktionen enstanden sind
+                                                                                                                            // return gibt auch sachen zurück die in ihren Funktionen
 }
-
+int findmax(int x, int y)                                                                                                   // Ternary operator return value if true brauch wie alle anderen werte
+{                                                                                                                           // Er fragt ob false oder true ist wen ja gibt die value aus
+    return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
+}
 int main(){
 
     printf(" Hallo\t\'Alexis\' :) \n ");
@@ -65,7 +69,9 @@ int main(){
     double SeiteB1;
     double SeiteC1;
     bool Sonne = true;
+    int max = findmax(3, 4);
 
+    printf("Max zwischen 3 und 4 ist: %d\n", max);
     printf("Cora, ich bin %d Jahre alt\n",age);
     printf("Meine name ist %s \n",name);
     printf("Mein Tracker Performance war gerade bei %c\n",TrackerGrade);
