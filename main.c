@@ -23,9 +23,10 @@ void geburtstag(char name_input[25], int age_input){                            
 
 }
 
-double hoch_age(double age_input){
-    return age_input * age_input;                                                                                                         //return gibt auch sachen zurück die in ihren Funktionen enstanden sind
-
+double hoch_age(double xy){
+return xy * xy;
+                                                                                                                            //zu finden in zeile 302
+                                                                                                                            //return gibt auch sachen zurück die in ihren Funktionen enstanden sind
 }
 
 int main(){
@@ -166,18 +167,18 @@ int main(){
     fflush(stdin);
 
     printf("\nWie ist dein name?:");
-    fgets(name_input, 25, stdin);                                                                        //fgets berücksichtig auch leerzeichen sscanf auch
+    fgets(name_input, 25, stdin);                                                                         //fgets berücksichtig auch leerzeichen sscanf auch
 
     printf("Hallo User, wie alt bist?:");
-    scanf("%d", &age_input);                                                                                         //scanf für user input &=speichermedium für ausgabe oder weiterverarbeitung
+    scanf("%d", &age_input);                                                                                          //scanf für user input &=speichermedium für ausgabe oder weiterverarbeitung
     if(age_input >= 18){
-        printf("https://www.amazon.de/Heiliges-Heilwasser-Fluss-Jordan-Flasche/dp/B09D2ZP291/");                     //If statement, selbst erklärend :)
+        printf("https://www.amazon.de/Heiliges-Heilwasser-Fluss-Jordan-Flasche/dp/B09D2ZP291/");                      //If statement, selbst erklärend :)
     }
-    else if(age_input < 0){                                                                                                 // else if wird verwendet um neue Parameter einzugeben inerhalb eines If statements
+    else if(age_input < 0){                                                                                                  // else if wird verwendet um neue Parameter einzugeben inerhalb eines If statements
         printf("Verarsch mich nicht Brudi!");
     }
     else{
-        printf("du bist zu jung fuer eine NSFW Nachicht :)");                                                        //else was passieren soll wenn die vorraussetzungen für "if" nicht erfüllt sind
+        printf("du bist zu jung fuer eine NSFW Nachicht :)");                                                         //else was passieren soll wenn die vorraussetzungen für "if" nicht erfüllt sind
     }
 
     printf("\nDu bist %d jahre alt!\n", age_input);
@@ -296,10 +297,10 @@ int main(){
     double cosinus = cos(10);                                                                                            // Cosinus wert
     double tangens = tan(11);                                                                                            // Tangens wert
 
-    printf("\n%lf", logrythm);
+    printf("\n%.2lf", logrythm);
 
-    double alter_hoch = hoch_age(age_input);
-    printf("%lf", hoch_age(age_input));
+    double xy = hoch_age(25);
+    printf("\n%lf", xy);
 
     geburtstag(name_input, age_input);                                                                                      // Funktion mit "user input" wichtig user input muss immer vorher ermittelt worden sein!
 
