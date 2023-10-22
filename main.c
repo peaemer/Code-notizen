@@ -3,6 +3,7 @@
 #include <string.h>                                                                                                         //Libary für string comannds
 #include <math.h>                                                                                                           //Libary für Mathe Funktionen
 #include <ctype.h>                                                                                                          //Libary für String types
+// https://www.youtube.com/watch?v=87SH2Cn0s9A&t=1569s
 
 int main(){
 
