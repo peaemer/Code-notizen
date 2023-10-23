@@ -8,13 +8,13 @@
 
 void shakira_shakira();                                                                                                     //Funktionen Prototypes sind kurz Form um alles übersichtlicher zu machen
                                                                                                                             //Kann unter Main gepackt werden
-void geburtstag (char[], int);
+void geburtstag(char[], int);
 
 double hoch_age(double);
 
 int findmax(int, int);
 
-void funktionstest(char[], int);
+void funktionstest(char rankup, char rankstore[1000]);
 
 int main(){
 
@@ -97,6 +97,15 @@ int main(){
     char einheit;
     float temp;
     char shakira;
+    char rankup;
+    char rankstore[1000];
+
+
+    printf("\nspielst du valo?");
+    scanf("%c", &rankup);
+
+    funktionstest(rankup, rankstore);
+
 
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
     scanf("%c", &einheit);
@@ -325,7 +334,51 @@ int findmax(int x, int y)                                                       
     return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
 }
 
-void funktionstest(char[], int)
-{
+void funktionstest (char rankup, char rankstore[1000]){
 
+    switch (rankup)
+    {
+        case 'Y':
+
+            printf("\nwelchen rank hast du?(iron/bronze/silver/gold/platin/diamond/ascendent/immortal/radiant");
+            scanf("%s", &rankstore);
+
+            switch (rankstore[1000])
+            {
+                case 'iron':
+                    printf("\ngrow a brain ");
+                    break;
+                case 'bronze':
+                    printf("\naimlabs is free and youtube tutorials too :)");
+                    break;
+                case 'silver':
+                    printf("\nno aim just brain");
+                    break;
+                case 'gold':
+                    printf("\nno brain anymore");
+                    break;
+                case 'platin':
+                    printf("\nget ur ego out of the sky");
+                    break;
+                case 'diamond':
+                    printf("\nstop having 10 e kittens at the same time (meow)");
+                    break;
+                case 'ascendent':
+                    printf("\nhardstuck?");
+                    break;
+                case 'immortal':
+                    printf("\nget some irl bitches bestie <3");
+                    break;
+                case 'radiant':
+                    printf("\n Radiant but still less than place 100? sadge");
+                    break;
+                default:
+                    printf("\nUnranked? Get your fucking ass up ffs");
+
+            }
+        case 'N':
+            printf("Schade:c");
+            break;
+
+    }
 }
