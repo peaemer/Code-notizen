@@ -5,34 +5,17 @@
 #include <ctype.h>                                                                                                          //Libary für String types
 // https://www.youtube.com/watch?v=87SH2Cn0s9A&t=1569s
 
-void shakira_shakira(){                                                                                                     // Funktion wird genutzt um codes nicht 100mal schreiben zu müssen mit "name"(); kann die funktion abgerufen werden
-    printf("\nI never really knew that she could dance like this (Hey)");
-    printf("\nShe make a man wanna speak Spanish");
-    printf("\n¿Cómo se llama? (¡Sí!), ¿bonita? (¡Sí!)");
-    printf("\nMi casa (Shakira, Shakira), su casa");
-    printf("\nOh, baby, when you talk like that (Huh-uh; yeah)");
-    printf("\nYou make a woman go mad (Oh)");
-    printf("\nSo be wise (¡Sí!), and keep on (¡Sí!)");
-    printf("\nReading the signs of my body (Uno, dos, tres, cuatro)");
-    printf("\nNo fightin'");
-}
 
-void geburtstag(char name_input[25], int age_input){                                                                        // Funktionen können gespeicherte werte verarbeiden welche aber in der Funktion und in der "call line" angegeben werden müssen
-    printf("\nAlles gute zum Gebutstag %s", name_input);
-    printf("Du bist jetzt %d Jahre alt!", age_input);
+void shakira_shakira();                                                                                                     //Funktionen Prototypes sind kurz Form um alles übersichtlicher zu machen
+                                                                                                                            //Kann unter Main gepackt werden
+void geburtstag (char[], int);
 
-}
+double hoch_age(double);
 
-double hoch_age(double xy)
-{
-return xy * xy;
-                                                                                                                            //zu finden in zeile 302
-                                                                                                                            // return gibt auch sachen zurück die in ihren Funktionen
-}
-int findmax(int x, int y)                                                                                                   // Ternary operator return value if true brauch wie alle anderen werte
-{                                                                                                                           // Er fragt ob false oder true ist wen ja gibt die value aus
-    return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
-}
+int findmax(int, int);
+
+void funktionstest(char[], int);
+
 int main(){
 
     printf(" Hallo\t\'Alexis\' :) \n ");
@@ -306,9 +289,43 @@ int main(){
     printf("\n%.2lf", logrythm);
 
     double xy = hoch_age(25);
-    printf("\n%lf", xy);
+    printf("\n%.2lf", xy);
 
     geburtstag(name_input, age_input);                                                                                      // Funktion mit "user input" wichtig user input muss immer vorher ermittelt worden sein!
 
     return 0;                                                                                                               // Return 0 bei fehler return 1 weil nicht bis line gekommen
+}
+
+void shakira_shakira()
+{                                                                                                                           // Funktion wird genutzt um codes nicht 100mal schreiben zu müssen mit "name"(); kann die funktion abgerufen werden
+    printf("\nI never really knew that she could dance like this (Hey)");
+    printf("\nShe make a man wanna speak Spanish");
+    printf("\n¿Cómo se llama? (¡Sí!), ¿bonita? (¡Sí!)");
+    printf("\nMi casa (Shakira, Shakira), su casa");
+    printf("\nOh, baby, when you talk like that (Huh-uh; yeah)");
+    printf("\nYou make a woman go mad (Oh)");
+    printf("\nSo be wise (¡Sí!), and keep on (¡Sí!)");
+    printf("\nReading the signs of my body (Uno, dos, tres, cuatro)");
+    printf("\nNo fightin'");
+}
+
+void geburtstag(char name_input[25], int age_input)
+{                                                                                                                           // Funktionen können gespeicherte werte verarbeiden welche aber in der Funktion und in der "call line" angegeben werden müssen
+    printf("\nAlles gute zum Gebutstag %s", name_input);
+    printf("Du bist jetzt %d Jahre alt!", age_input);
+}
+
+double hoch_age(double xy)                                                                                                  // return gibt auch sachen zurück die in ihren Funktionen
+{
+    return xy * xy;
+}
+
+int findmax(int x, int y)                                                                                                   // Ternary operator return value if true brauch wie alle anderen werte
+{                                                                                                                           // Er fragt ob false oder true ist wen ja gibt die value aus
+    return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
+}
+
+void funktionstest(char[], int)
+{
+
 }
