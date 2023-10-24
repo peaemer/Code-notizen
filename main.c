@@ -14,7 +14,7 @@ double hoch_age(double);
 
 int findmax(int, int);
 
-void funktionstest(char rankup, char rankstore[1000]);
+// void funktionstest(char rankup, char rankstore[1000]);
 
 int main(){
 
@@ -54,7 +54,21 @@ int main(){
     bool Sonne = true;
     int max = findmax(3, 4);
 
-    printf("Max zwischen 3 und 4 ist: %d\n", max);
+    // String funktions zum testen einfach kommentar slashes entefernen :)
+    //strlwr(name);                                                                                                         //setzt alles auf klein buchstaben inerhalb des strings
+    //strupr(name);                                                                                                         //setzt alles auf groß buchstaben inerhalb des strings
+    //strcat(name, cora);                                                                                                   //fügt den letzten string auf zum ersten hinzu
+    //strncat(name, cora, 4);                                                                                               //fügt den letzten string dem ersten hinzu aber nur die vorgebene länge
+    //strncpy(name, cora);                                                                                                  //wird benutzt um string "cora" auf string "name" zu kopieren
+    strncpy(name, cora, 1);                                                                                               //Kopiert nur die angebenen buchstaben von String "cora" auf "name
+    //strset(name, '!');                                                                                                    //ersetzt die buchstaben mit dem Charakter den du vorgebene hast
+    //strnset(name, 'x', 1);                                                                                                //Ersetzt den char den du numerisch auswählst mit dem Buchstaben oder char den du auswählst
+    //strrev(name);                                                                                                         //dreht den string um
+
+
+    printf("%s", name);
+
+    printf("\nMax zwischen 3 und 4 ist: %d\n", max);
     printf("Cora, ich bin %d Jahre alt\n",age);
     printf("Meine name ist %s \n",name);
     printf("Mein Tracker Performance war gerade bei %c\n",TrackerGrade);
@@ -98,13 +112,11 @@ int main(){
     float temp;
     char shakira;
     char rankup;
-    char rankstore[1000];
+    char rankstore[1000];                                                                                                   //NF
 
 
     printf("\nspielst du valo?");
     scanf("%c", &rankup);
-
-    funktionstest(rankup, rankstore);
 
 
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
@@ -334,17 +346,15 @@ int findmax(int x, int y)                                                       
     return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
 }
 
-void funktionstest (char rankup, char rankstore[1000]){
+void funktionstest (char rankup, char rankstore[1000]) {                                                                    //NF
 
-    switch (rankup)
-    {
+    switch (rankup) {
         case 'Y':
 
             printf("\nwelchen rank hast du?(iron/bronze/silver/gold/platin/diamond/ascendent/immortal/radiant");
             scanf("%s", &rankstore);
 
-            switch (rankstore[1000])
-            {
+            switch (rankstore[1000]) {
                 case 'iron':
                     printf("\ngrow a brain ");
                     break;
@@ -365,9 +375,6 @@ void funktionstest (char rankup, char rankstore[1000]){
                     break;
                 case 'ascendent':
                     printf("\nhardstuck?");
-                    break;
-                case 'immortal':
-                    printf("\nget some irl bitches bestie <3");
                     break;
                 case 'radiant':
                     printf("\n Radiant but still less than place 100? sadge");
