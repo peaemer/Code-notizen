@@ -14,7 +14,9 @@ double hoch_age(double);
 
 int findmax(int, int);
 
-// void funktionstest(char rankup, char rankstore[1000]);
+void funktionstest(char rankup, char rankstore[100]);
+
+void schoeneswetter(float temp, bool Sonne);
 
 int main(){
 
@@ -60,10 +62,17 @@ int main(){
     //strcat(name, cora);                                                                                                   //fügt den letzten string auf zum ersten hinzu
     //strncat(name, cora, 4);                                                                                               //fügt den letzten string dem ersten hinzu aber nur die vorgebene länge
     //strncpy(name, cora);                                                                                                  //wird benutzt um string "cora" auf string "name" zu kopieren
-    strncpy(name, cora, 1);                                                                                               //Kopiert nur die angebenen buchstaben von String "cora" auf "name
+    //strncpy(name, cora, 1);                                                                              //Kopiert nur die angebenen buchstaben von String "cora" auf "name
+
     //strset(name, '!');                                                                                                    //ersetzt die buchstaben mit dem Charakter den du vorgebene hast
     //strnset(name, 'x', 1);                                                                                                //Ersetzt den char den du numerisch auswählst mit dem Buchstaben oder char den du auswählst
     //strrev(name);                                                                                                         //dreht den string um
+
+    //int result = strlen(name);                                                                                            //länge des strings als int
+    //int result = strcmp(name, cora);                                                                                      //gleicht alle buchstaben mit einander ab wenn alle gleich sind return 0
+    //int result = strncmp(name, cora, 1);                                                                                  //gleicht angegebene Buchstaben ab
+    //int result = strcmpi(name, cora);                                                                                     //gleiche wie strcmp ignoriert aber compatiblität
+    //int result = strnicmp(name, cora);                                                                                    //gleiche wie strncmp ignoriert aber compatiblität
 
 
     printf("%s", name);
@@ -112,13 +121,15 @@ int main(){
     float temp;
     char shakira;
     char rankup;
-    char rankstore[1000];                                                                                                   //NF
+    char rankstore[100];                                                                                                   //NF
 
 
-    printf("\nspielst du valo?");
-    scanf("%c", &rankup);
+    //printf("\nspielst du valo?");
+    //scanf("%c", &rankup);
 
+    //rankup = toupper(rankup);
 
+    fflush(stdin);
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
     scanf("%c", &einheit);
 
@@ -142,37 +153,42 @@ int main(){
 
     fflush(stdin);
 
+    for(int index = 1; index <=2;)                                                                                         //for loop wiederholt operationen etc (index gibt den zähler es muss bestimmt werden von wo an er z#hlt und danach wie lange)
+    {                                                                                                                       //mit "i+=number" kann auch in größeren schritten gezählt werden, was zb für zählungen genutzt werden kann
+
                                                                                                                             //Taschenrechner überspringen :)
-    printf("\nGib mir ein Operandie ( - + / *)");                                                                    // So programmiert man ein Taschenrechner :P
-    scanf("%c", &operandie);
+        printf("\nGib mir ein Operandie ( - + / *)");                                                                // So programmiert man ein Taschenrechner :P
+        scanf("%c", &operandie);
 
-    printf("\nGib mir die Erste Zahl");
-    scanf("%lf", &num1);
+        printf("\nGib mir die Erste Zahl");
+        scanf("%lf", &num1);
 
-    printf("\nGib mir die zweite Zahl");
-    scanf("%lf", &num2);
+        printf("\nGib mir die zweite Zahl");
+        scanf("%lf", &num2);
 
-    switch (operandie){
-        case '+':
-            summe2 = num1 + num2;
-            printf("\nSumme= %.2lf", summe2);
-            break;
-        case '-':
-            summe2 = num1 - num2;
-            printf("\nSumme= %.2lf", summe2);
-            break;
-        case '/':
-            summe2 = num1 / num2;
-            printf("\nSumme= %.2lf", summe2);
-            break;
-        case '*':
-            summe2 = num1 * num2;
-            printf("\nSumme= %.2lf", summe2);
-            break;
-        default:
-            printf("%c is not valid", operandie);
+        switch (operandie){
+            case '+':
+                summe2 = num1 + num2;
+                printf("\nSumme= %.2lf", summe2);
+                break;
+            case '-':
+                summe2 = num1 - num2;
+                printf("\nSumme= %.2lf", summe2);
+                break;
+            case '/':
+                summe2 = num1 / num2;
+                printf("\nSumme= %.2lf", summe2);
+                break;
+            case '*':
+                summe2 = num1 * num2;
+                printf("\nSumme= %.2lf", summe2);
+                break;
+            default:
+                printf("%c is not valid", operandie);
+
+        }
+        fflush(stdin);
     }
-
 
     fflush(stdin);
 
@@ -251,7 +267,7 @@ int main(){
 
 
 
-    printf("Willst du den refrain von Shakira? (Y/N)");                                                               // Beispiel für die verwendung von funktionen
+    printf("Willst du den refrain von Shakira? (Y/N)");                                                              // Beispiel für die verwendung von funktionen
     scanf("%c", &shakira);
 
     shakira = toupper(shakira);
@@ -275,7 +291,7 @@ int main(){
     if(temp >= 0 && temp <=30 && Sonne == true){                                                                            // Logical operator && AND fügt neue Paremeter bei einer If abfrage hinzu in dem fall ein UND
         printf("\nSchönes Wetter heute");
     }
-    else{
+    else {
         printf("\nSchlechtes Wetter heute");
     }
 
@@ -346,41 +362,45 @@ int findmax(int x, int y)                                                       
     return (x > y) ? x : y;                                                                                                 // Kann man auch in langer vor mit (if) und (if else) schreiben
 }
 
-void funktionstest (char rankup, char rankstore[1000]) {                                                                    //NF
+void funktionstest (char rankup, char rankstore[100])
+{                                                                                                                           //NF
 
-    switch (rankup) {
+    switch (rankup)
+    {
         case 'Y':
 
-            printf("\nwelchen rank hast du?(iron/bronze/silver/gold/platin/diamond/ascendent/immortal/radiant");
+            printf("\nwelchen rank hast du?(bronze/silver/gold/platin/diamond/ascendent/immortal/radiant)");
             scanf("%s", &rankstore);
 
-            switch (rankstore[1000]) {
-                case 'iron':
-                    printf("\ngrow a brain ");
-                    break;
-                case 'bronze':
+            switch (rankstore[0])
+            {
+                case 'b':
                     printf("\naimlabs is free and youtube tutorials too :)");
                     break;
-                case 'silver':
+                case 's':
                     printf("\nno aim just brain");
                     break;
-                case 'gold':
+                case 'g':
                     printf("\nno brain anymore");
                     break;
-                case 'platin':
+                case 'p':
                     printf("\nget ur ego out of the sky");
                     break;
-                case 'diamond':
+                case 'd':
                     printf("\nstop having 10 e kittens at the same time (meow)");
                     break;
-                case 'ascendent':
+                case 'a':
                     printf("\nhardstuck?");
                     break;
-                case 'radiant':
+                case 'i':
+                    printf("\nget some irl bitches bestie <3");
+                    break;
+                case 'r':
                     printf("\n Radiant but still less than place 100? sadge");
                     break;
                 default:
                     printf("\nUnranked? Get your fucking ass up ffs");
+                    break;
 
             }
         case 'N':
