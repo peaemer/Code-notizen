@@ -125,6 +125,8 @@ int main(){
     char rankup;
     char rankstore[100];                                                                                                   //NF
     char helloworld1[25];
+    int number1 = 0;
+    int summe1 = 0;
 
 
     //printf("\nspielst du valo?");
@@ -168,7 +170,23 @@ int main(){
         fgets(helloworld1, 25, stdin);
     }
 
+
     printf("HIIII %s", helloworld1[25]);
+
+
+    do{                                                                                                                     //do while loop wird solange ausgeführt bis die parameter nicht mehr erfüllt werden
+        printf("Enter a number over 0:");
+        scanf("%d", &number1);
+
+        if(number1 > 0)
+        {
+            summe1 += number1;
+        }
+    }while (number1 > 0);
+
+
+
+
 
     for(int index = 1; index <=2;)                                                                                          //for loop wiederholt operationen etc (index gibt den zähler es muss bestimmt werden von wo an er z#hlt und danach wie lange)
     {                                                                                                                       //mit "i+=number" kann auch in größeren schritten gezählt werden, was zb für zählungen genutzt werden kann
