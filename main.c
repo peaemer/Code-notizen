@@ -16,7 +16,9 @@ int findmax(int, int);
 
 void funktionstest(char rankup, char rankstore[100]);
 
-void schoeneswetter(float temp, bool Sonne);
+void helloworld(char[25]);
+
+
 
 int main(){
 
@@ -122,12 +124,15 @@ int main(){
     char shakira;
     char rankup;
     char rankstore[100];                                                                                                   //NF
+    char helloworld1[25];
 
 
     //printf("\nspielst du valo?");
     //scanf("%c", &rankup);
 
     //rankup = toupper(rankup);
+
+
 
     fflush(stdin);
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
@@ -153,7 +158,19 @@ int main(){
 
     fflush(stdin);
 
-    for(int index = 1; index <=2;)                                                                                         //for loop wiederholt operationen etc (index gibt den zähler es muss bestimmt werden von wo an er z#hlt und danach wie lange)
+    printf("\nwenn du mir nicht dein namen sagst sterben alle die dir lieb sind!");
+    fgets(helloworld1, 25, stdin);
+
+    while(strlen(helloworld1) == 0)                                                                                     //widerholt einen Loop so oft bis die parameter erfüllt sind
+    {
+        printf("DU HAST DEIN NAMEN NICHT EINGETRAGEN! LETZTE CHANCE!!!");
+        printf("\nwenn du mir nicht dein namen sagst sterben alle die dir lieb sind!");
+        fgets(helloworld1, 25, stdin);
+    }
+
+    printf("HIIII %s", helloworld1[25]);
+
+    for(int index = 1; index <=2;)                                                                                          //for loop wiederholt operationen etc (index gibt den zähler es muss bestimmt werden von wo an er z#hlt und danach wie lange)
     {                                                                                                                       //mit "i+=number" kann auch in größeren schritten gezählt werden, was zb für zählungen genutzt werden kann
 
                                                                                                                             //Taschenrechner überspringen :)
@@ -286,6 +303,7 @@ int main(){
 
 
 
+
     //USER INPUT ENDE
 
     if(temp >= 0 && temp <=30 && Sonne == true){                                                                            // Logical operator && AND fügt neue Paremeter bei einer If abfrage hinzu in dem fall ein UND
@@ -409,3 +427,4 @@ void funktionstest (char rankup, char rankstore[100])
 
     }
 }
+
