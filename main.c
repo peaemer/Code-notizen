@@ -127,7 +127,9 @@ int main(){
     char helloworld1[25];
     int number1 = 0;
     int summe1 = 0;
-
+    int reihen;
+    int spalten;
+    char symbol;
 
     //printf("\nspielst du valo?");
     //scanf("%c", &rankup);
@@ -162,20 +164,22 @@ int main(){
 
     printf("\nwenn du mir nicht dein namen sagst sterben alle die dir lieb sind!");
     fgets(helloworld1, 25, stdin);
+    helloworld1[strlen(helloworld1) - 1] = '\0';                                                                        //entfernt das \n von fgets ist notwenig um in while schleife zu gelangen
 
     while(strlen(helloworld1) == 0)                                                                                     //widerholt einen Loop so oft bis die parameter erfüllt sind
     {
         printf("DU HAST DEIN NAMEN NICHT EINGETRAGEN! LETZTE CHANCE!!!");
         printf("\nwenn du mir nicht dein namen sagst sterben alle die dir lieb sind!");
         fgets(helloworld1, 25, stdin);
+        helloworld1[strlen(helloworld1) - 1] = '\0';
     }
 
 
-    printf("HIIII %s", helloworld1[25]);
+    printf("HIIII %s", helloworld1);
 
 
     do{                                                                                                                     //do while loop wird solange ausgeführt bis die parameter nicht mehr erfüllt werden
-        printf("Enter a number over 0:");
+        printf("\nEnter a number over 0:");
         scanf("%d", &number1);
 
         if(number1 > 0)
@@ -184,10 +188,27 @@ int main(){
         }
     }while (number1 > 0);
 
+    printf("\nDie Anzahl an reihen:");
+    scanf("%d", &reihen);
 
+    printf("\nDie Anzahl an spalten:");
+    scanf("%d", &spalten);
 
+    scanf("%c");
 
+    printf("\nWelches Symbol soll verwendet werden?");
+    scanf("%c", &symbol);
 
+    for(int i = 1; i <= reihen; i++)                                                                                        //Nested loops sind schleifen in schleifen die sich vortlaufen  ausführen
+    {
+        for(int j = 1; j <= spalten; j++)
+        {
+            printf("\t%c", symbol);
+        }
+        printf("\n");
+    }
+
+    fflush(stdin);
     for(int index = 1; index <=2;)                                                                                          //for loop wiederholt operationen etc (index gibt den zähler es muss bestimmt werden von wo an er z#hlt und danach wie lange)
     {                                                                                                                       //mit "i+=number" kann auch in größeren schritten gezählt werden, was zb für zählungen genutzt werden kann
 
