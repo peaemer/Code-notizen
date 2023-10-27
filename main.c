@@ -65,7 +65,7 @@ int main(){
     //strcat(name, cora);                                                                                                   //fügt den letzten string auf zum ersten hinzu
     //strncat(name, cora, 4);                                                                                               //fügt den letzten string dem ersten hinzu aber nur die vorgebene länge
     //strncpy(name, cora);                                                                                                  //wird benutzt um string "cora" auf string "name" zu kopieren
-    //strncpy(name, cora, 1);                                                                              //Kopiert nur die angebenen buchstaben von String "cora" auf "name
+    //strncpy(name, cora, 1);                                                                                               //Kopiert nur die angebenen buchstaben von String "cora" auf "name
 
     //strset(name, '!');                                                                                                    //ersetzt die buchstaben mit dem Charakter den du vorgebene hast
     //strnset(name, 'x', 1);                                                                                                //Ersetzt den char den du numerisch auswählst mit dem Buchstaben oder char den du auswählst
@@ -143,11 +143,11 @@ int main(){
     char symbol;
     double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};                   //Arrays, damit speichert man mehr als eine variable in einer variable
 
-    printf("\nspielst du valo?");
-    scanf("%c", &rankup);
-    rankup = toupper(rankup);
+    //printf("\nspielst du valo?");
+    //scanf("%c", &rankup);
+    //rankup = toupper(rankup);
 
-    funktionstest(rankup, rankstore);                                                                                       //NF
+    //funktionstest(rankup, rankstore);                                                                                       //NF
 
     printf("%d bytes\n", sizeof(penisgroesse));
 
