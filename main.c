@@ -141,7 +141,17 @@ int main(){
     int reihen;
     int spalten;
     char symbol;
-    double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};                   //Arrays, damit speichert man mehr als eine variable in einer variable
+    double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};
+                                                                                                                            //Arrays, damit speichert man mehr als eine variable in einer variable {} = 2d array
+                                                                                                                            //Arrays können auch in Arrays gespeichert werden
+
+    int eyecandytracker[2][5] = {{1,2,3,4, 5}, {6,7,8,9}};                     //2d arrays müsen vorher wissen wie viel gespeichert wird
+                                                                                                                            //2d arrays sind arrays bei jedem elemnt ein array ist nützlich für matrix grid oder datatables
+    int rows1 = sizeof(eyecandytracker)/sizeof(eyecandytracker[0]);                                                        //sizeof gibt die größe der variable in bytes aus kann benutzt werden um variablen und arrays anzugleichen ohne den code zu updaten
+    int columns1 = sizeof(eyecandytracker[0])/sizeof(eyecandytracker[0][0]);
+
+    printf("reihen %d\n", rows1);
+    printf("spalten %d\n", columns1);
 
     //printf("\nspielst du valo?");
     //scanf("%c", &rankup);
@@ -149,7 +159,17 @@ int main(){
 
     //funktionstest(rankup, rankstore);                                                                                       //NF
 
-    printf("%d bytes\n", sizeof(penisgroesse));
+
+    for(int i = 0; i < rows1;i ++)                                                                                              //2d array ausgeben
+    {
+        for(int j = 0; j < columns1; j++)
+        {
+            printf("%d", eyecandytracker[i][j]);
+
+        }
+        printf("\n");
+    }
+
 
     printf("%.2lf cm", penisgroesse[0]);
 
