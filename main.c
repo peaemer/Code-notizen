@@ -22,6 +22,7 @@ void helloworld(char[25]);
 
 int main(){
 
+
     printf(" Hallo\t\'Alexis\' :) \n ");
     printf("Neue\t Zeile\t bitte!");
     printf("\n 1\t 2\t 3\n 4\t 5\t 6\n 7\t 8\t 9\n \t 0\n");
@@ -111,6 +112,16 @@ int main(){
 
     printf("%d\n", x1);
 
+
+    for(int i = 1; i <= 20; i++)
+    {
+        if(i == 13)
+        {
+            continue;                                                                                                       // continue wird benutzt um eine schleife zu überspringen in diesem fall wird die 13 übersprungen
+        }
+        printf("%d\n", i);
+    }
+
     // USER INPUT
     char name_input[25];
     int age_input;
@@ -130,13 +141,21 @@ int main(){
     int reihen;
     int spalten;
     char symbol;
+    double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};                   //Arrays, damit speichert man mehr als eine variable in einer variable
 
     //printf("\nspielst du valo?");
     //scanf("%c", &rankup);
 
     //rankup = toupper(rankup);
 
+    printf("%d bytes\n", sizeof(penisgroesse));
 
+    printf("%.2lf cm", penisgroesse[0]);
+
+    for(int i = 0; i < sizeof(penisgroesse)/sizeof(penisgroesse[0]) ; i ++)                                                 //sizeof gibt die größe der variable in bytes aus kann benutzt werden um variablen und arrays anzugleichen ohne den code zu updaten
+    {
+        printf("\n%.2lf cm", penisgroesse[i]);
+    }
 
     fflush(stdin);
     printf("\nIst die Temperatur in F (fahrenheit) oder C (Celsius)?");                                              // Temperatur umwandeln - Print und scanf und Mathe Operationen können innerhalb eines "if statements" geschehen
