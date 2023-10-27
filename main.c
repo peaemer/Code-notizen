@@ -143,10 +143,11 @@ int main(){
     char symbol;
     double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};                   //Arrays, damit speichert man mehr als eine variable in einer variable
 
-    //printf("\nspielst du valo?");
-    //scanf("%c", &rankup);
+    printf("\nspielst du valo?");
+    scanf("%c", &rankup);
+    rankup = toupper(rankup);
 
-    //rankup = toupper(rankup);
+    funktionstest(rankup, rankstore);                                                                                       //NF
 
     printf("%d bytes\n", sizeof(penisgroesse));
 
