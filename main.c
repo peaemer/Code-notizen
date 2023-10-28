@@ -59,6 +59,14 @@ int main(){
     bool Sonne = true;
     int max = findmax(3, 4);
 
+    char sorting[15] = "energy";                                                                                            //String sorting (wichtig ist das die strings gleich lang sind) wenn das nicht der fall ist müssen wie die gleiche größe haben "[15]"
+    char sorting2[15] = "bier";
+    char sorting3[15] = "coca cola";
+    char temps[15];
+
+
+
+
     // String funktions zum testen einfach kommentar slashes entefernen :)
     //strlwr(name);                                                                                                         //setzt alles auf klein buchstaben inerhalb des strings
     //strupr(name);                                                                                                         //setzt alles auf groß buchstaben inerhalb des strings
@@ -79,6 +87,16 @@ int main(){
 
 
     printf("%s", name);
+
+    strcpy(temps, sorting);                                                                                     //string sorting wird in temps gespeichert
+    strcpy(sorting, sorting2);
+    strcpy(sorting2, temps);
+
+    printf("\nWasser schmeckt nach:%s ", sorting);
+    printf("\nWasser schmeckt nach:%s ", sorting2);
+    printf("\nWasser schmeckt nach:%s ", sorting3);
+
+
 
     printf("\nMax zwischen 3 und 4 ist: %d\n", max);
     printf("Cora, ich bin %d Jahre alt\n",age);
