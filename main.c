@@ -14,11 +14,35 @@ double hoch_age(double);
 
 int findmax(int, int);
 
-void funktionstest(char rankup, char rankstore[100]);
+void funktionstest(char , char[100]);
 
 void helloworld(char[25]);
 
+void sortfunction(int[], int);
 
+void sortfunction(int array[], int size)                                                                                //Sorting Arrays so könnte das aussehen wenn C nicht busted wäre und die scheiß debug funktion mal klappen würde......
+{
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < array; j++)
+        {
+            if(array[j] > array [j+1])
+            {
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+}
+
+void printarray(int array[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        printf("%d", array[i]);
+    }
+}
 
 int main(){
 
@@ -64,6 +88,10 @@ int main(){
     char sorting3[15] = "coca cola";
     char temps[15];
 
+    //int array[] = {5,1,8,9,4,3,2,6,7,};
+    //int size = sizeof(array)/sizeof(array[0]);
+    //sortfunction(array, size);
+    //printarray(array, size);
 
 
 
@@ -531,4 +559,5 @@ void funktionstest (char rankup, char rankstore[100])
 
     }
 }
+
 
