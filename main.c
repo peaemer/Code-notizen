@@ -142,6 +142,8 @@ int main(){
     int spalten;
     char symbol;
     double penisgroesse[] = {3.04, 14.54, 11.24, 16.22, 22.22, 31.21, 11.22};
+    char namen[][15] = {"Alexis", "Cora", "Jack", "Jona", "Johanna"};
+    strcpy(namen[5], "Tobias");                                                                                 //strcpy kopiert den string in die variable
                                                                                                                             //Arrays, damit speichert man mehr als eine variable in einer variable {} = 2d array
                                                                                                                             //Arrays können auch in Arrays gespeichert werden
 
@@ -170,8 +172,13 @@ int main(){
         printf("\n");
     }
 
+    for(int i = 0; i < sizeof(namen)/sizeof(namen[0]); i ++)
+    {
+        printf("\n%s", namen[i]);
+    }
 
-    printf("%.2lf cm", penisgroesse[0]);
+
+    printf("\n%.2lf cm", penisgroesse[0]);
 
     for(int i = 0; i < sizeof(penisgroesse)/sizeof(penisgroesse[0]) ; i ++)                                                 //sizeof gibt die größe der variable in bytes aus kann benutzt werden um variablen und arrays anzugleichen ohne den code zu updaten
     {
