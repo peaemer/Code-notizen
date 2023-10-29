@@ -3,6 +3,8 @@
 #include <string.h>                                                                                                         //Libary für string comannds
 #include <math.h>                                                                                                           //Libary für Mathe Funktionen
 #include <ctype.h>                                                                                                          //Libary für String types
+#include <stdlib.h>                                                                                                         //Libary für Random
+#include <time.h>                                                                                                           //Libary für Time
 // https://www.youtube.com/watch?v=87SH2Cn0s9A&t=1569s
 
 
@@ -70,6 +72,8 @@ typedef struct
 enum day{So = 1, Mo = 2, Di = 3, Mi = 4, Do = 5, Fr = 6, Sa = 7};                                                           //Enums helfen den code übersichtlicher zu machen
 
 
+
+
 int main(){
 
 
@@ -113,6 +117,16 @@ int main(){
     char sorting2[15] = "bier";
     char sorting3[15] = "coca cola";
     char temps[15];
+
+    srand(time(0));                                                                                             //RNG (Random Number Generator) wird benutzt um zufällige zahlen zu generieren
+
+    int number3 = (rand() % 20) + 1;
+    int number4 = (rand() % 20) + 1;
+    int number5 = (rand() % 20) + 1;
+
+    printf("\nRandom number: %d\n", number3);
+    printf("\nRandom number: %d\n", number4);
+    printf("\nRandom number: %d\n", number5);
 
     //int array[] = {5,1,8,9,4,3,2,6,7,};                                                                                   //Array Sorting funktionert aber nicht, weil C busted ist und die debug funktion nicht funktioniert
     //int size = sizeof(array)/sizeof(array[0]);
@@ -255,7 +269,7 @@ int main(){
     enum day today = Mo;                                                                                                         //Enums gebraucht
     printf("\nHeute ist der %d ", today);
 
-    if(today == 1 || today ==7)
+    if(today == So || today == Sa)
     {
         printf("\nWochenende");
     }
