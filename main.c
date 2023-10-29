@@ -67,6 +67,9 @@ typedef struct
     float gpa;
 }students;
 
+enum day{So = 1, Mo = 2, Di = 3, Mi = 4, Do = 5, Fr = 6, Sa = 7};                                                           //Enums helfen den code übersichtlicher zu machen
+
+
 int main(){
 
 
@@ -247,6 +250,18 @@ int main(){
         printf("\tAge: %d", itclass[i].age);
         printf("\tGPA: %.1f", itclass[i].gpa);
 
+    }
+
+    enum day today = Mo;                                                                                                         //Enums gebraucht
+    printf("\nHeute ist der %d ", today);
+
+    if(today == 1 || today ==7)
+    {
+        printf("\nWochenende");
+    }
+    else
+    {
+        printf("\nKein Wochenende");
     }
 
     // USER INPUT
