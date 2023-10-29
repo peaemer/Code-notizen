@@ -44,6 +44,13 @@ void printarray(int array[], int size)
     }
 }
 
+struct player                                                                                                              //Structs sind wie Arrays aber mit mehreren daten typen zb. int, float, char etc
+{
+    char name[50];
+    int score;
+
+};
+
 int main(){
 
 
@@ -88,7 +95,7 @@ int main(){
     char sorting3[15] = "coca cola";
     char temps[15];
 
-    //int array[] = {5,1,8,9,4,3,2,6,7,};
+    //int array[] = {5,1,8,9,4,3,2,6,7,};                                                                                   //Array Sorting funktionert aber nicht, weil C busted ist und die debug funktion nicht funktioniert
     //int size = sizeof(array)/sizeof(array[0]);
     //sortfunction(array, size);
     //printarray(array, size);
@@ -168,6 +175,21 @@ int main(){
         printf("%d\n", i);
     }
 
+    struct player player1;
+    struct player player2;
+
+    strcpy(player1.name, "Alexis");
+    player1.score = 100;
+
+    strcpy(player2.name, "Cora");
+    player2.score = 200;
+
+    printf("\nSpieler 1: %s", player1.name);
+    printf("\tScore: %d", player1.score);
+
+    printf("\nSpieler 2: %s", player2.name);
+    printf("\tScore: %d", player2.score);
+
     // USER INPUT
     char name_input[25];
     int age_input;
@@ -198,7 +220,7 @@ int main(){
     int rows1 = sizeof(eyecandytracker)/sizeof(eyecandytracker[0]);                                                        //sizeof gibt die größe der variable in bytes aus kann benutzt werden um variablen und arrays anzugleichen ohne den code zu updaten
     int columns1 = sizeof(eyecandytracker[0])/sizeof(eyecandytracker[0][0]);
 
-    printf("reihen %d\n", rows1);
+    printf("\nreihen %d\n", rows1);
     printf("spalten %d\n", columns1);
 
     //printf("\nspielst du valo?");
@@ -206,6 +228,7 @@ int main(){
     //rankup = toupper(rankup);
 
     //funktionstest(rankup, rankstore);                                                                                       //NF
+
 
 
     for(int i = 0; i < rows1;i ++)                                                                                              //2d array ausgeben
