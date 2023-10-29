@@ -51,6 +51,22 @@ struct player                                                                   
 
 };
 
+//typedef char fstring[25];
+
+typedef struct
+{
+    char name[25];
+    char password [12];
+    int id;
+} users;
+
+typedef struct
+{
+    char name[25];
+    int age;
+    float gpa;
+}students;
+
 int main(){
 
 
@@ -189,6 +205,49 @@ int main(){
 
     printf("\nSpieler 2: %s", player2.name);
     printf("\tScore: %d", player2.score);
+
+    users user1 = {"Alexis", "123456789", 1};                                                                       //Structs gebraucht
+    users user2 = {"Cora", "987654321", 2};
+    users user3 = {"Jack", "12345678", 3};
+    users user4 = {"Jonas", "87654321", 4};
+    users user5 = {"Johanna", "12343567", 5};
+
+    printf("\nUser 1: %s", user1.name);
+    printf("\tPassword: %s", user1.password);
+    printf("\tID: %d", user1.id);
+
+    printf("\nUser 2: %s", user2.name);
+    printf("\tPassword: %s", user2.password);
+    printf("\tID: %d", user2.id);
+
+    printf("\nUser 3: %s", user3.name);
+    printf("\tPassword: %s", user3.password);
+    printf("\tID: %d", user3.id);
+
+    printf("\nUser 4: %s", user4.name);
+    printf("\tPassword: %s", user4.password);
+    printf("\tID: %d", user4.id);
+
+    printf("\nUser 5: %s", user5.name);
+    printf("\tPassword: %s", user5.password);
+    printf("\tID: %d", user5.id);
+
+
+    students student1 = {"Alexis", 18, 1.5};                                                                                   //Structs gebraucht
+    students student2 = {"Cora", 17, 1.8};
+    students student3 = {"Jack", 25, 2.0};
+    students student4 = {"Jonas", 20, 1.2};
+    students student5 = {"Johanna", 19, 1.0};
+
+    students itclass[] = {student1, student2, student3, student4, student5};
+
+    for(int i = 0; i < sizeof(itclass)/sizeof(itclass[0]); i++)
+    {                                                                                                                                           //Structs gebraucht
+        printf("\nStudent %d: %s", i+1, itclass[i].name);
+        printf("\tAge: %d", itclass[i].age);
+        printf("\tGPA: %.1f", itclass[i].gpa);
+
+    }
 
     // USER INPUT
     char name_input[25];
