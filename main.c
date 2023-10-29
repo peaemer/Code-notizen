@@ -203,7 +203,7 @@ int main(){
     printf("\nSpieler 1: %s", player1.name);
     printf("\tScore: %d", player1.score);
 
-    printf("\nSpieler 2: %s", player2.name);
+    printf("\nSpieler 2: %-12s", player2.name);
     printf("\tScore: %d", player2.score);
 
     users user1 = {"Alexis", "123456789", 1};                                                                       //Structs gebraucht
@@ -243,7 +243,7 @@ int main(){
 
     for(int i = 0; i < sizeof(itclass)/sizeof(itclass[0]); i++)
     {                                                                                                                                           //Structs gebraucht
-        printf("\nStudent %d: %s", i+1, itclass[i].name);
+        printf("\nStudent %d: %-12s", i+1, itclass[i].name);
         printf("\tAge: %d", itclass[i].age);
         printf("\tGPA: %.1f", itclass[i].gpa);
 
