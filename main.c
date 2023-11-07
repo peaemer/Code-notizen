@@ -20,23 +20,7 @@ void funktionstest(char , char[100]);
 
 void helloworld(char[25]);
 
-void sortfunction(int[], int);
-
-void sortfunction(int array[], int size)                                                                                //Sorting Arrays so könnte das aussehen wenn C nicht busted wäre und die scheiß debug funktion mal klappen würde......
-{
-    for(int i = 0; i < size; i++)
-    {
-        for(int j = 0; j < array; j++)
-        {
-            if(array[j] > array [j+1])
-            {
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-            }
-        }
-    }
-}
+void sortfunction(int, int)                                                                                //Sorting Arrays so könnte das aussehen wenn C nicht busted wäre und die scheiß debug funktion mal klappen würde......
 
 void printarray(int array[], int size)
 {
@@ -671,4 +655,21 @@ void funktionstest (char rankup, char rankstore[100])
     }
 }
 
+void sortfunction (int array[], int size)
+{
+    {
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < array; j++)
+        {
+            if(array[j] > array [j+1])
+            {
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+}
 
+}
